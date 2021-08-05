@@ -6,26 +6,31 @@ let TODOS_KEY = 'toDos'
 
 let todosArray = [];
 
+todoInput.focus()
+
 
 function saveTodos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(todosArray))
 }
 
+
 function replaceTodo(event) {
   event.preventDefault()
   const li = event.target.parentElement
   const targetNode = event.target.parentElement
-  targetNode.classList.toggle("clicked");
 
   const span = targetNode.querySelector("span")
   span.classList.add("hidden")
   const replaceForm = document.createElement("form")
   li.appendChild(replaceForm)
   const replaceInput = document.createElement("input")
+  replaceForm.appendChild(replaceInput)
+  replaceInput.focus();
+  
   const replaceInputSubmit = document.createElement("input")
   replaceInputSubmit.type = "submit"
-  replaceForm.appendChild(replaceInput)
   replaceForm.appendChild(replaceInputSubmit)
+
 
   replaceForm.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -38,8 +43,6 @@ function replaceTodo(event) {
     editTodo[0].text = replaceInputValue
     saveTodos()
   })
-  
-  
 }
 
 
