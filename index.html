@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do It!</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script defer src="/js/greeting.js"></script>
+  <script defer src="/js/clock.js"></script>
+  <script defer src="/js/todo.js"></script>
+</head>
+<body>
+  <h3 id="clock">00:00:00</h3>
+  <h1><span class="title-todo">To Do</span> <span class="title-it">IT!</span></h1>
+  <form id="login-form">
+    <input required maxlength="15" type="text" placeholder="이름을 입력해주세요">
+    <input type="submit" value="Login">
+  </form>
+  <h2 id="greeting" class="hidden">
+    <span></span>
+  </h2>
+  <form id="todo-form">
+    <input type="text">
+    <input type="submit" value="✚">
+  </form>
+  <ul id="todo-list">
+
+  </ul>
+</body>
+</html>

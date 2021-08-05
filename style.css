@@ -1,0 +1,13 @@
+.hidden {
+  display: none;
+}
+
+.title-todo {
+  color: #aabb88;
+  font-size: 35px;
+}
+
+.title-it {
+  color: #669900;
+  font-size: 44px;
+}
