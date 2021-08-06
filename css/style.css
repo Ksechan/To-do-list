@@ -1,0 +1,22 @@
+
+
+.hidden {
+  display: none;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title span:first-child {
+  color: #aabb88;
+  font-size: 35px;
+  margin-right: 20px;
+}
+
+.title span:last-child {
+  color: #669900;
+  font-size: 48px;
+}
