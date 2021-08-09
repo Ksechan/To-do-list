@@ -9,8 +9,12 @@ function onGeoSucess(position) {
   fetch(url).then(response => response.json()).then(data => {
     const city = document.querySelector("#weather .city")
     const weather = document.querySelector("#weather .weather")
+    const weatherIcon = document.querySelector("#weather .weather-icon")
+    console.log(data)
     city.innerHTML = data.name;
-    weather.innerHTML = `&sol; ${data.weather[0].main} ${data.main.temp}`
+    weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+    weather.innerHTML = `${data.weather[0].main} ${Math.floor(data.main.temp)}도`
+    console.log(weatherIcon)
   })
 }
 
@@ -19,3 +23,5 @@ function onGeoError() {
 }
 
 navigator.geolocation.getCurrentPosition(onGeoSucess, onGeoError);
+
+

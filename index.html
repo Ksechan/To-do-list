@@ -5,34 +5,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do It!</title>
+  <!-- 아이콘 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- 구글폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
   <script defer src="/js/greeting.js"></script>
   <script defer src="/js/clock.js"></script>
   <script defer src="/js/todo.js"></script>
   <script defer src="/js/weather.js"></script>
 </head>
 <body>
-  <h1 class="title"><span>To Do</span><span>IT!</span></h1>
-  <h3 id="clock">00:00:00</h3>
-  <form id="login-form">
-    <input required maxlength="15" type="text" placeholder="이름을 입력해주세요">
-    <input type="submit" value="Login">
-  </form>
+  <div class="title">
+    <h1><span>To Do</span><span>IT!</span></h1>
+  </div>
+    <h3 id="clock">00:00:00</h3>
+    <div id="weather">
+      <img class="weather-icon"><br/>
+      <p class="city"></p>
+      <span class="weather"></span>
+    </div>
+
+    <div class="login-form-container">
+      <form id="login-form">
+        <p>Your name?</p>
+        <input class="input" required maxlength="15" type="text" placeholder="이름을 입력해주세요.">
+        <input class="submit" type="submit" value="Login">
+      </form>
+    </div>
+
   <h2 id="greeting" class="hidden">
     <span></span>
   </h2>
-  <form id="todo-form">
+
+  <form id="todo-form" class="hidden">
     <input type="text">
     <input type="submit" value="✚">
   </form>
   <ul id="todo-list">
   </ul>
-  <div id="weather">
-    <span class="city"></span>
-    <span class="weather"></span>
-  </div>
 </body>
 </html>

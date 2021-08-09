@@ -2,12 +2,10 @@ const todoForm = document.getElementById("todo-form")
 const todoInput = todoForm.querySelector("input")
 const todoList = document.getElementById("todo-list")
 
+
 let TODOS_KEY = 'toDos'
 
 let todosArray = [];
-
-todoInput.focus()
-
 
 function saveTodos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(todosArray))
