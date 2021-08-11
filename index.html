@@ -25,30 +25,37 @@
   <div class="title">
     <h1><span>To Do</span><span>IT!</span></h1>
   </div>
-    <h3 id="clock">00:00:00</h3>
-    <div id="weather">
-      <img class="weather-icon"><br/>
-      <p class="city"></p>
-      <span class="weather"></span>
-    </div>
+  
+  <div class="time">
+    <span id="today"></span>
+    <h3 id="clock"></h3>
+  </div>
 
-    <div class="login-form-container">
-      <form id="login-form">
-        <p>Your name?</p>
-        <input class="input" required maxlength="15" type="text" placeholder="이름을 입력해주세요.">
-        <input class="submit" type="submit" value="Login">
-      </form>
-    </div>
+  <div id="weather">
+    <img class="weather-icon">
+      <div class="weather-info">
+    <p class="city"></p>
+    <span class="weather"></span>
+      </div>
+  </div>
+
+  <div class="login-form-container">
+    <form id="login-form">
+      <p>Your name?</p>
+      <input class="input" required maxlength="15" type="text" placeholder="이름을 입력해주세요.">
+      <input class="submit" type="submit" value="Login">
+    </form>
+  </div>
 
   <h2 id="greeting" class="hidden">
     <span></span>
   </h2>
 
   <form id="todo-form" class="hidden">
-    <input type="text">
-    <input type="submit" value="✚">
+    <input class="todo-input" type="text" required maxlength="20">
+    <input class="todo-input-submit" type="submit" value="✚">
+    <ul id="todo-list">
+    </ul>
   </form>
-  <ul id="todo-list">
-  </ul>
 </body>
 </html>

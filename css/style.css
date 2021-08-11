@@ -4,10 +4,19 @@
 
 html {
   position: relative;
+  height: 100vh;
 }
 
 body {
   background-color: #ffe4cd;
+}
+
+input {
+  width: 300px;
+  height: 45px;
+  margin-bottom: 20px;
+  outline: transparent;
+  border-radius: 20px;
 }
 
 .hidden {
@@ -20,9 +29,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 130px auto 35px;
+  margin: 130px auto 45px;
   padding: 10px 0;
-  width: 500px;
+  width: 700px;
   border-radius: 30px;
   background-size: 70%;
   box-shadow: 2px 5px 10px #e8e8e8;
@@ -45,24 +54,47 @@ body {
   font-size: 48px;
 }
 
-#clock {
+.time {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 30px;
-  color: #919191;
+  color: #717171;
+}
+
+.time #today {
+  display: block;
+  font-size: 23px;
+  margin-bottom: 7px;
+}
+
+.time #clock {
+  font-size: 25px;
 }
 
 #weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 13px;
+  left: 13px;
   border: none;
 }
 
 .weather-icon {
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
+}
+
+#weather .weather-info {
+  flex-wrap: wrap;
+  width: 120px;
+  color: #717171;
+}
+
+#weather .city {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .login-form-container {
@@ -83,12 +115,91 @@ body {
   color: #919191;
 }
 
-input {
-  width: 300px;
-  height: 40px;
-  margin-bottom: 15px;
-}
-
 #login-form .input {
   padding-left: 10px;
+}
+
+#login-form .submit {
+  font-size: 20px;
+  color: #919191;
+}
+
+
+/* greeting */
+
+#greeting {
+  font-size: 30px;
+  color: #717171;
+  text-align: center;
+}
+
+
+/* To-do */
+
+#todo-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#todo-form input:first-child {
+  border-radius: 17px;
+  padding-left: 14px;
+}
+
+#todo-form .todo-input {
+  width: 350px;
+}
+
+#todo-form .todo-input-submit {
+  width: 40px;
+  height: 40px;
+  color: #636363;
+}
+
+#todo-form li {
+  margin-bottom: 10px;
+  color: #717171;
+}
+
+#todo-form #todo-list .replace-form {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#todo-form #todo-list .replace-input {
+  background-color: #fff0e0;
+}
+
+#todo-form #todo-list .replace-init-btn {
+  position: absolute;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  color: #636363;
+  font-size: 17px;
+  border: none;
+  border-radius: 20px;
+}
+
+#todo-form #todo-list .replace-btn {
+  position: absolute;
+  right: 45px;
+  width: 40px;
+  height: 40px;
+  color: #636363;
+  font-size: 17px;
+  text-align: center;
+}
+
+replace-btn {
+  background-color: transparent;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
 }
