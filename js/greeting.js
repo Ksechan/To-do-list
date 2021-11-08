@@ -44,4 +44,3 @@ if (savedUserName === null) {
   todoHiddenRemove.classList.remove("hidden")
   paintGreetings(savedUserName)
 }
-
